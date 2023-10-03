@@ -1,0 +1,11 @@
+.div-erro {
+    width: 34vw;
+    text-align: left;
+    margin: 2px 0 0 0;
+    color: hsl(354, 100%, 66%);
+
+}
+
+input {
+    border-color: hsl(354, 100%, 66%);
+}
