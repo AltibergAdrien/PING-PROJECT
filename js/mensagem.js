@@ -1,33 +1,33 @@
 const botao = document.querySelector("#btn");
 const input = document.querySelector("#input");
-const DivErro = document.querySelector("DivErro")
+const DivErro = document.querySelector("#div-erro");
 
-botao.onclick = function () {
-    event.preventDefault();
-    const searchTerm = input.value.trim();
+botao.addEventListener("click", function acao(event) {
+  event.preventDefault();
 
-    if(!searchTerm){
-        DivErro.innerHTML = '<p class="msg-erro">Please provide a valid email address</p>';
-    }
-};
+  // Ação que será executada quando o botão for clicado
+  var valorDoInput = input.value;
 
-//function verificarInput() {
-//    const searchTerm = input.value.trim();
-//    if (!searchTerm) {
-//
-//        const searchTerm = input.value.trim();
-//
+  // Verifica se o valor é uma string vazia
+  if (valorDoInput === "") {
 
- //       var msg = document.createElement("p");
-//        msg.classList.add("msg-erro");
-//        msg.textContent = "Please provide a valid email address";
-//
+    //cria um elemento
+    var msg = document.createElement("p");
 
- //       var Divmsg = document.querySelector("div-erro");
- //       Divmsg.appendChild(msg);
-//
-  //      Divmsg.innerHTML = 
+    // adiciona um texto na div
+    msg.textContent = "Please provide a valid email address";
 
-   //     return false;
-  ///  };
-//};
+    //adiciona uma classe no css da div
+    msg.classList.add("msg-erro");
+
+    // Adicione a nova div ao corpo do documento
+    DivErro.appendChild(msg);
+
+    //adiciona uma classe no css da tag
+    input.classList.add("input");
+
+    //Faz com que a ação seja executada apenas uma vez
+    botao.removeEventListener("click", acao);
+
+  }
+});

@@ -120,6 +120,10 @@ footer {
     color: hsl(0, 0%, 59%);
 }
 
+#div-erro {
+    width: 33vw;
+}
+
 /*----------RESPONSIVIDADE----------*/
 
 @media (max-width: 1440px) {
@@ -240,6 +244,10 @@ footer {
 
         .img {
             width: 80%;
+        }
+
+        #div-erro {
+            width: 50vw;
         }
     }
 }

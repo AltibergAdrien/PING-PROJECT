@@ -1,11 +1,12 @@
-.div-erro {
-    width: 34vw;
-    text-align: left;
+.msg-erro {
+    display: flex;
+    width: 50vw;
+    text-align: center;
     margin: 2px 0 0 0;
     color: hsl(354, 100%, 66%);
 
 }
 
-input {
+.input {
     border-color: hsl(354, 100%, 66%);
 }
