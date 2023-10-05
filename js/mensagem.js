@@ -29,5 +29,16 @@ botao.addEventListener("click", function acao(event) {
     //Faz com que a ação seja executada apenas uma vez
     botao.removeEventListener("click", acao);
 
-  }
+  } else {
+    alert("você será notificado!");
+    // Defina o tempo em milissegundos antes de recarregar (por exemplo, 5000ms para 5 segundos)
+    var tempoAntesDeRecarregar = 300;
+
+    // Agende o recarregamento após o tempo especificado
+    setTimeout(function () {
+      location.reload();
+    }, tempoAntesDeRecarregar);
+  };
+
+
 });
